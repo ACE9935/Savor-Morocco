@@ -50,7 +50,7 @@ export default function MagicLinkEmail(url:string) {
               target='_blank'
               style={{ ...link, color: '#898989' }}
             >
-              {configurations.clientHost}
+              {configurations.appName}
             </Link>
           </Text>
         </Container>
