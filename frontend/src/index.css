@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color:#e28557;
+  --primary-color-dark:#a5613e;
+  --primary-black:#282a29;
+  --font-name: "Montserrat", serif;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 405;
+  font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  position: relative;
+}
