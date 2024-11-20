@@ -21,10 +21,6 @@ export default function MagicLinkEmail(url:string) {
       <Body style={main}>
         <Container style={container}>
           <Heading style={h1}>Log in to {configurations.appName}</Heading>
-          <Img src='https://firebasestorage.googleapis.com/v0/b/recipes-app-d9a48.firebasestorage.app/o/logo.png?alt=media&token=7e15d268-6cac-43ab-aa1a-7137b9e5e27e'
-          alt="Logo"
-          width={60}
-          height={60}/>
           <Link
             href={url}
             target='_blank'
@@ -54,7 +50,7 @@ export default function MagicLinkEmail(url:string) {
               target='_blank'
               style={{ ...link, color: '#898989' }}
             >
-              {configurations.appName}
+              {configurations.clientHost}
             </Link>
           </Text>
         </Container>

@@ -50,7 +50,7 @@ export default function ResetLinkEmail(url:string) {
 
           <Text style={footer}>
             <Link
-              href={process.env.HOST}
+              href={process.env.CLIENT_HOST}
               target='_blank'
               style={{ ...link, color: '#898989' }}
             >
