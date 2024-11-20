@@ -18,6 +18,7 @@ customInitApp()
 
 // API routes can be defined here
 app.use("/api", router)
+app.get("/", (req:Request, res:Response) => res.send("Express on Vercel"));
 app.use("*", (req:Request, res:Response) => res.status(404).json({ error: "not found"}))
 
 app.listen(PORT, () => {
