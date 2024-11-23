@@ -53,7 +53,7 @@ function ProfileTab() {
                      <EditDisplayName/>
                        
                         </div>
-                        <div className="text-sm text-slate-700">@{user?.email}</div>
+                        <div className="text-sm text-slate-700">{user?.email}</div>
                         </div>
                      </div>
                      <div className="w-full flex flex-col gap-2 mt-4">
