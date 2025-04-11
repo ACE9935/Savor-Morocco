@@ -69,7 +69,7 @@ function ResetPasswordTrigger() {
               variant="filled"
               sx={{ width: '100%' }}
               >
-              A password reset link has been sent to your email
+              A password reset link has been sent to your email address.
             </Alert>
             </Snackbar>
             <span onClick={onOpen} className="text-sm font-bold underline text-blue-500 cursor-pointer">Forgot password?</span>
