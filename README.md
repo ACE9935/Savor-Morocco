@@ -11,12 +11,12 @@
 ### 🔐 Authentication
 - Users can authenticate via **Email/Password** or **Google**.
 - Upon successful authentication, a **profile page** is created for the user.
-- Users can:
+- Authenticates Users can:
   - Add recipes to **Favorites**
   - Rate recipes and impact their overall rating
-  - Leave **comments** on recipe pages (only for authenticated users)
+  - Leave **comments** on recipe pages
   - Create custom **recipe books**
-  - Create custom **shopping lists** (only for authenticated users)
+  - Create custom **shopping lists**
   - **Delete** their account at any time
 
 ### 🍲 Recipes
