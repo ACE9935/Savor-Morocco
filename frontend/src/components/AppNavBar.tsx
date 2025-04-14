@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import React, { forwardRef, useState } from "react";
+
+import { forwardRef, useState } from "react";
 import ProfileLink from "./ProfileLink";
 import Logo from "./Logo";
 import SearchBar from "../pages/search/SearchBar";
@@ -22,9 +22,9 @@ const AppNavBar = forwardRef<HTMLDivElement>((props, ref) => {
             <SearchBar restoreNavBar={()=>setOpenMobileSearchBar(false)}/>
             :
             
-            <><Link to={"/"} className="">
+            <>
                 <Logo fontSize="1rem" color="text-white" />
-            </Link>
+            
             {matches&&<SearchBar restoreNavBar={()=>setOpenMobileSearchBar(false)}/>}
             <div className="flex gap-3 items-center">
             {!matches&&!openMobileSearBar&&<IconButton onClick={()=>setOpenMobileSearchBar(true)}><Search/></IconButton>}

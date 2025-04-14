@@ -4,11 +4,9 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   updateProfile,
-  signInWithEmailLink,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import generateRandomId from "../utils/generateRandomId";
 import { configurations } from "../app-configurations";
 import AppServices from "../services/app-services";
 import { addUser } from "./addUser";

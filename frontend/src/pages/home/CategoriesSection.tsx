@@ -41,7 +41,7 @@ function CatergoriesSection() {
     },[selectedType])
 
     return ( 
-        <div className="p-6 flex justify-around w-full gap-10">
+        <div className="p-6 flex gap-10">
             <div className="w-full max-w-[800px] flex-col gap-10 flex">
             <div className="bg-white shadow-lg rounded-full flex md:justify-between gap-2 py-2 px-6 flex-wrap">
                 {types.map(t=><CategorieBtn setSelected={setSelectedType} selected={selectedType==t} type={t}/>)}   

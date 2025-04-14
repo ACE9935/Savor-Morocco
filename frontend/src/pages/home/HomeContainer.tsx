@@ -22,12 +22,12 @@ function HomeContainer() {
     },[searchParams,user])
 
     return ( 
-        <div className="mt-[-4rem]">
+        <div className="mt-[-4rem] flex flex-col items-center">
               <Helmet>
                <title>Savor Morocco | Home</title>
                <meta name="description" content={configurations.appDescription} />
              </Helmet>
-          <div className="px-6 py-36 bg-gradient-to-b from-primary-color from-40% to-orange-100/60 bg-cover bg-center grid place-items-center">
+          <div className="px-6 w-full py-36 bg-gradient-to-b from-primary-color from-40% to-orange-100/60 bg-cover bg-center grid place-items-center">
             <h1 className="text-center text-6xl font-bold text-green-400">Explore.<span className="text-white"> Enjoy.</span></h1>
           </div>
           <CatergoriesSection/>

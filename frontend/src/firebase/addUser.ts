@@ -1,7 +1,6 @@
 import { User } from "../types/UserInterface";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "./firebase";
-import axios from "axios";
 import AppServices from "../services/app-services";
 
 export async function addUser(user:User,provider:"Google"|"Email") {
@@ -9,9 +8,8 @@ export async function addUser(user:User,provider:"Google"|"Email") {
         const collectionRef = collection(db, 'users'); 
         if(provider=="Email"){
 
-            AppServices.generateVerificationToken(user.email)
+            await AppServices.generateVerificationToken(user.email)
             .then(response => {
-              
               user={...user,verificationToken:response.data.data}
             })
             .catch(e => {

@@ -10,7 +10,7 @@ export async function deleteUserAccount(userId: string): Promise<void> {
 
         if (user && user.uid === userId) {
             // 2. Delete user in Firebase Authentication
-            await deleteUser(user);  // Delete the user from Firebase Authentication
+            await deleteUser(user) // Delete the user from Firebase Authentication
             console.log("User deleted from Firebase Authentication");
 
             // 3. Sign out after deleting user
