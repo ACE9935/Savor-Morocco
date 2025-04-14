@@ -14,7 +14,6 @@ export default class SignInController {
 
     try {
       const {email,verificationToken,id,accessToken} = req.body
-      console.log("Verification: ",verificationToken)
       await auth().verifyIdToken(accessToken);
       await sendVerificationRequest({identifier:email!,id:id!,token:verificationToken!})
 

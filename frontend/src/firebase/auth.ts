@@ -31,7 +31,6 @@ export const doSignInWithEmailAndPassword = async (email:string, password:string
       await auth?.currentUser?.getIdToken()  // Pass 'true' if you want to force refresh the token
       .then((token) => {
         verificationAccessToken=token
-        console.log(verificationAccessToken)
       })
       .catch((error) => {
         console.error("Error getting token:", error);
@@ -134,7 +133,6 @@ export const doCreateUserWithEmailAndPassword = async ({userName,email, pwd,rePw
       await updateProfile(auth?.currentUser, { displayName: userName,photoURL:data.photoUrl })
             .then(async user=>{
               const newUser=await addUser(data,"Email")
-              console.log(newUser);
               const accessToken=await auth?.currentUser?.getIdToken()
               if(auth.currentUser) await AppServices.sendVerificationEmail(
                 newUser?.email!,
@@ -159,7 +157,7 @@ export const doCreateUserWithEmailAndPassword = async ({userName,email, pwd,rePw
         // Set a generic error message or handle it based on your requirement
       }
 
-    return { errors: { error: { ...errors.error, email: "An error occurred while creating the account." } }, status: "ERROR" };
+    return { errors: { error: { ...errors.error, email: "An error occurred while creating the account" } }, status: "ERROR" };
   }
 };
 
