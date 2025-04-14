@@ -3,6 +3,8 @@ import http from "../http-common";
 class AppServices {
 
   sendVerificationEmail(email:string,verificationToken:string,id:string,accessToken:string) {
+    console.log("Sending verification email")
+    console.log(verificationToken)
     return http.post(`/send-verification-email`,{email,verificationToken,id,accessToken});
   }
   generateVerificationToken(email:string){
