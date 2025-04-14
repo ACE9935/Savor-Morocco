@@ -134,6 +134,7 @@ export const doCreateUserWithEmailAndPassword = async ({userName,email, pwd,rePw
       await updateProfile(auth?.currentUser, { displayName: userName,photoURL:data.photoUrl })
             .then(async user=>{
               const newUser=await addUser(data,"Email")
+              console.log(newUser);
               const accessToken=await auth?.currentUser?.getIdToken()
               if(auth.currentUser) await AppServices.sendVerificationEmail(
                 newUser?.email!,
