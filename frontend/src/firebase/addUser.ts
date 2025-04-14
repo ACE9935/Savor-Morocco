@@ -10,6 +10,7 @@ export async function addUser(user:User,provider:"Google"|"Email") {
 
             await AppServices.generateVerificationToken(user.email)
             .then(response => {
+              console.log(response.data.data)
               user={...user,verificationToken:response.data.data}
             })
             .catch(e => {
